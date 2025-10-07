@@ -1,0 +1,144 @@
+/* Basic Layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: #ff6347;
+}
+
+/* Hero Section */
+.about-hero {
+  background: url('images/restaurant.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  background-attachment: fixed;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Story Section */
+.about-story {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.story-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+}
+
+.story-text h2 {
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Mission Section */
+.mission-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+}
+
+.mission-section h2 {
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+/* Gallery */
+.gallery-section {
+  padding: 80px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .story-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-image img {
+    max-width: 90%;
+  }
+}

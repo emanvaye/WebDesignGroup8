@@ -1,0 +1,166 @@
+/* Base */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: #ff6347;
+  padding: 20px 0;
+  color: white;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #ffd700;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  line-height: 1.6;
+}
+
+.info-item {
+  margin: 15px 0;
+}
+
+.info-item h4 {
+  margin-bottom: 5px;
+  color: #222;
+}
+
+/* Contact Form */
+.contact-form-container {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6347;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e5533d;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Map */
+.map-section iframe {
+  border: none;
+  display: block;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contact-flex {
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form-container {
+    width: 100%;
+  }
+
+  .contact-form-container {
+    margin-top: 30px;
+  }
+}

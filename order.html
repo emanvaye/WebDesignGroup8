@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Food - The LiberianPot Restaurant</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="LOGO AND NAME.png" alt="LiberianPot logo">
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="the liberian pot.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="order-section">
+  <div class="container order-flex">
+
+    <!-- Left Column: Image -->
+    <div class="order-image">
+      <img src="jollof rice.jpg" alt="Delicious Liberian Food">
+    </div>
+
+    <!-- Right Column: Form -->
+    <div class="order-form-container">
+      <h2>Place Your Order</h2>
+      <form action="#" class="order-form" onsubmit="return submitOrder()">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="food">Select Food Item</label>
+          <select id="food" required>
+            <option value="">-- Choose a dish --</option>
+            <option value="Liberian Peper Soup and Fufu">Liberian Peper Soup and Fufu - $10.00</option>
+            <option value="Cassava Leaf">Cassava Leaf - $8.50</option>
+            <option value="Jollof Rice">Jollof Rice - $6.00</option>
+            <option value="Dumboy">Dumboy - $8.00</option>
+            <option value="Liberian Rice Bread">Liberian Rice Bread - $2.00</option>
+            <option value="Liberian Chicken Gravy">Liberian Chicken Gravy - $10.00</option>
+            <option value="Liberian Peanut Soup">Liberian Peanut Soup - $7.00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <textarea id="address" rows="3" required></textarea>
+        </div>
+
+        <button type="submit" class="btn primary">Submit Order</button>
+      </form>
+      <p id="order-message" class="success-message"></p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 LiberianPot | All Rights Reserved</p>
+</footer>
+
+<script>
+function submitOrder() {
+  const name = document.getElementById('name').value;
+  const food = document.getElementById('food').value;
+  const qty = document.getElementById('quantity').value;
+
+  if (name && food && qty) {
+    document.getElementById('order-message').textContent = 
+      `Thank you, ${name}! Your order for ${qty} ${food}(s) has been placed successfully.`;
+  }
+
+  return false; // Prevent form submission
+}
+</script>
+
+</body>
+</html>
